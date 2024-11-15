@@ -36,6 +36,12 @@ source=(
   "grammar.patch"
   "glib-2.68.0.patch"
   "volatile.patch"
+  "rubyasm.patch"
+  "wtfstd17.patch"
+  "compilerflags.patch"
+  "webkitextern.patch"
+  "xmlconst.patch"
+  "bison3.7.patch"
 )
 sha256sums=(
   "588aea051bfbacced27fdfe0335a957dca839ebe36aa548df39c7bbafdb65bf7"
@@ -48,6 +54,12 @@ sha256sums=(
   "5a62fbd0df69c6951562e72cd7b3c58cae7f2807338ced7b4a1973440b3dd193"
   "db202fedd72a21318646c561afcd76656ea8ba6b1d641363fc7b69ae5687aa28"
   "013bf12e0ab79664c74f1ef3c299f564cd1f47feab2a3daa5ab80db1c5aebfa1"
+  "c56be904dca926b656236bbed3fb918d6ecf9ec41553aaea6daccbe9bd20068c"
+  "16b5eace4935ec0d9c704e6972bd793bc3fc5f442a9896de7300eee7e837383a"
+  "e2005ded1123615d56b0147110a9d4eff0a6a10cf5b756271d7a584e3e647924"
+  "be8d20d4eb73b9a5540a710a90a0f55d31e0ed2ec188a62590c808ce5c055493"
+  "0a36cc9a84715105579a028fae87ee5d770456bb50f7321f6fcde5d24c6c214f"
+  "9f796028ba0873fd55ea1693dec5896bc0f955d0cda062e2b326d62dbda45140"
 )
 
 prepare() {
@@ -74,6 +86,13 @@ prepare() {
 
   # gcc11+ compiler volatile patch
   patch -Np1 -i "${srcdir}/volatile.patch"
+
+  patch -Np1 -i "${srcdir}/rubyasm.patch"
+  patch -Np1 -i "${srcdir}/wtfstd17.patch"
+  patch -Np1 -i "${srcdir}/compilerflags.patch"
+  patch -Np1 -i "${srcdir}/webkitextern.patch"
+  patch -Np1 -i "${srcdir}/xmlconst.patch"
+  patch -Np1 -i "${srcdir}/bison3.7.patch"
 }
 
 build() (
