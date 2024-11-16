@@ -1,5 +1,5 @@
 diff --git a/Source/WebKit/gtk/GNUmakefile.am b/Source/WebKit/gtk/GNUmakefile.am
-index 5502f25..8cad710 100644
+index 5502f25..d03c2bd 100644
 --- a/Source/WebKit/gtk/GNUmakefile.am
 +++ b/Source/WebKit/gtk/GNUmakefile.am
 @@ -352,9 +352,9 @@ $(GENSOURCES_WEBKIT)/webkitmarshal.h: stamp-webkitmarshal.h

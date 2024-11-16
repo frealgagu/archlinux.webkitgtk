@@ -1,5 +1,5 @@
 diff --git a/Source/autotools/SetupCompilerFlags.m4 b/Source/autotools/SetupCompilerFlags.m4
-index 2141818..ff237ee 100644
+index 2141818..c5c50b5 100644
 --- a/Source/autotools/SetupCompilerFlags.m4
 +++ b/Source/autotools/SetupCompilerFlags.m4
 @@ -1,7 +1,7 @@
@@ -7,7 +7,7 @@ index 2141818..ff237ee 100644
  CFLAGS="$CFLAGS -pthread -std=c99"
  # Use the C++11 standard. Do not warn about C++11 incompatibilities.
 -CXXFLAGS="$CXXFLAGS -pthread -std=c++11 -Wno-c++11-compat"
-+CXXFLAGS="$CXXFLAGS -pthread -std=c++17 -Wno-template-id-cdtor -Wno-implicit-fallthrough -Wno-deprecated-copy -Wno-deprecated-declarations -Wno-register"
++CXXFLAGS="$CXXFLAGS -pthread -std=c++20 -Wno-template-id-cdtor -Wno-implicit-fallthrough -Wno-deprecated-copy -Wno-deprecated-declarations -Wno-register"
  
  # Clang requires suppression of unused arguments warnings.
  if test "$c_compiler" = "clang"; then
